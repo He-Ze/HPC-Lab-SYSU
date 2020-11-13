@@ -3,7 +3,7 @@
 #include <time.h>
 #include <math.h>
 #include <string.h>
-#include <omp.h>
+#include <pthread.h>
 #include <iostream>
 struct for_index{
     int start;

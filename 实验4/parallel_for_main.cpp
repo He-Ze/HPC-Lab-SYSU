@@ -19,23 +19,23 @@ void PrintMatrix(int *A, int *B, int *C, int m, int n, int k);
 
 int main(int argc, char *argv[])
 {
-    int *A, *B, *C;
+    int *a, *b, *c;
     int m, n, k;
     clock_t start,end;
-    printf("请依次输入m，n，k的值（范围512～2048）：");
+    printf("请依次输入m，n，k的值：");
     scanf("%d%d%d",&m,&n,&k);
     if(m>2048||n>2048||k>2048){
         printf("请输入小于2048的值");
         scanf("%d%d%d",&m,&n,&k);
     }
-    A = new int[m * n];
-    B = new int[n * k];
-    C = new int[m * k];
+    a = new int[m * n];
+    b = new int[n * k];
+    c = new int[m * k];
     srand((unsigned)time(0));
     for (int i = 0; i < m; i++){
         for (int j = 0; j < n; j++){
-            a[i*m+j] = (double)rand() / (double)(RAND_MAX)*100;
-            b[i*n+j] = (double)rand() / (double)(RAND_MAX)*100;
+            a[i*m+j] = (int)rand()%10;
+            b[i*n+j] = (int)rand()%10;
         }
     }
     if(isprint){
@@ -43,19 +43,19 @@ int main(int argc, char *argv[])
         printf("矩阵A有%d行%d列 ：\n",m,n);
         for (int y = 0; y < m; y++){
             for (int j = 0; j < n; j++){
-                printf("%.2f  \t",a[y*m+j]);
+                printf("%d  \t",a[y*m+j]);
             }
             printf("\n");
         }
         printf("矩阵B有%d行%d列 ：\n",n,k);
         for (int y = 0; y < n; y++){
             for (int j = 0; j < k; j++){
-                printf("%.2f  \t",b[y*n+j]);
+                printf("%d  \t",b[y*n+j]);
             }
             printf("\n");
         }
     }
-    struct args *arg = new args(A, B, C, &m, &n, &k);
+    struct args *arg = new args(a, b, c, &m, &n, &k);
     start=clock();
     parallel_for(0, m, 1, gemm, arg, thread_count);
     end=clock();
@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
             printf("矩阵C有%d行%d列 ：\n",m,k);
             for (int y = 0; y < m; y++){
                 for (int j = 0; j < n; j++){
-                    printf("%.2f  \t",c[y][j]);
+                    printf("%d  \t",c[y*m+j]);
                 }
                 printf("\n");
             }
