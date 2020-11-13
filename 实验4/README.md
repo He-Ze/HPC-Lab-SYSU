@@ -192,7 +192,7 @@ for (int i = 0; i < m;i++){
 
 此任务共有三个文件：
 
-<img src="/Users/heze/Library/Mobile Documents/com~apple~CloudDocs/大三上/高性能计算实验/实验4/图片/5.png" alt="5" style="zoom:45%;" />
+<img src="图片/5.png" alt="5" style="zoom:45%;" />
 
 其中`parallel_for.h`与`parallel_for.cpp`为库函数的头文件与实现，`parallel_for_main`为主函数
 
