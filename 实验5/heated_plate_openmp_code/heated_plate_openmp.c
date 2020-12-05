@@ -2,11 +2,6 @@
 # include <stdio.h>
 # include <math.h>
 # include <omp.h>
-
-int main ( int argc, char *argv[] );
-
-/******************************************************************************/
-
 int main ( int argc, char *argv[] )
 
 /******************************************************************************/
@@ -15,7 +10,7 @@ int main ( int argc, char *argv[] )
 
     MAIN is the main program for HEATED_PLATE_OPENMP.
 
-  Discussion:
+  Discussion:   
 
     This code solves the steady state heat equation on a rectangular region.
 
@@ -103,9 +98,11 @@ int main ( int argc, char *argv[] )
     Local, double W[M][N], the solution computed at the latest iteration.
 */
 {
-# define M 500
-# define N 500
 
+  int M=atoi(argv[1]);
+  int N=atoi(argv[2]);
+  int threads=atoi(argv[3]);
+  
   double diff;
   double epsilon = 0.001;
   int i;
@@ -114,8 +111,8 @@ int main ( int argc, char *argv[] )
   int j;
   double mean;
   double my_diff;
-  double u[M][N];
-  double w[M][N];
+  double u[M*N];
+  double w[M*N];
   double wtime;
 
   printf ( "\n" );
@@ -133,27 +130,27 @@ int main ( int argc, char *argv[] )
 */
   mean = 0.0;
 
-#pragma omp parallel shared ( w ) private ( i, j )
+#pragma omp parallel shared ( w ) private ( i, j ) num_threads(threads)
   {
 #pragma omp for
     for ( i = 1; i < M - 1; i++ )
     {
-      w[i][0] = 100.0;
+      w[i*M] = 100.0;
     }
 #pragma omp for
     for ( i = 1; i < M - 1; i++ )
     {
-      w[i][N-1] = 100.0;
+      w[i*M+(N-1)] = 100.0;
     }
 #pragma omp for
     for ( j = 0; j < N; j++ )
     {
-      w[M-1][j] = 100.0;
+      w[(M-1)*M+j] = 100.0;
     }
 #pragma omp for
     for ( j = 0; j < N; j++ )
     {
-      w[0][j] = 0.0;
+      w[j] = 0.0;
     }
 /*
   Average the boundary values, to come up with a reasonable
@@ -162,12 +159,12 @@ int main ( int argc, char *argv[] )
 #pragma omp for reduction ( + : mean )
     for ( i = 1; i < M - 1; i++ )
     {
-      mean = mean + w[i][0] + w[i][N-1];
+      mean = mean + w[i*M] + w[i*M+(N-1)];
     }
 #pragma omp for reduction ( + : mean )
     for ( j = 0; j < N; j++ )
     {
-      mean = mean + w[M-1][j] + w[0][j];
+      mean = mean + w[(M-1)*M+j] + w[j];
     }
   }
 /*
@@ -182,14 +179,14 @@ int main ( int argc, char *argv[] )
 /* 
   Initialize the interior solution to the mean value.
 */
-#pragma omp parallel shared ( mean, w ) private ( i, j )
+#pragma omp parallel shared ( mean, w ) private ( i, j ) num_threads(threads)
   {
 #pragma omp for
     for ( i = 1; i < M - 1; i++ )
     {
       for ( j = 1; j < N - 1; j++ )
       {
-        w[i][j] = mean;
+        w[i*M+j] = mean;
       }
     }
   }
@@ -208,7 +205,7 @@ int main ( int argc, char *argv[] )
 
   while ( epsilon <= diff )
   {
-# pragma omp parallel shared ( u, w ) private ( i, j )
+# pragma omp parallel shared ( u, w ) private ( i, j ) num_threads(threads)
     {
 /*
   Save the old solution in U.
@@ -218,7 +215,7 @@ int main ( int argc, char *argv[] )
       {
         for ( j = 0; j < N; j++ )
         {
-          u[i][j] = w[i][j];
+          u[i*M+j] = w[i*M+j];
         }
       }
 /*
@@ -230,7 +227,7 @@ int main ( int argc, char *argv[] )
       {
         for ( j = 1; j < N - 1; j++ )
         {
-          w[i][j] = ( u[i-1][j] + u[i+1][j] + u[i][j-1] + u[i][j+1] ) / 4.0;
+          w[i*M+j] = ( u[(i-1)*M+j] + u[(i+1)*M+j] + u[i*M+(j-1)] + u[i*M+(j+1)] ) / 4.0;
         }
       }
     }
@@ -242,7 +239,7 @@ int main ( int argc, char *argv[] )
   to update DIFF.
 */
     diff = 0.0;
-# pragma omp parallel shared ( diff, u, w ) private ( i, j, my_diff )
+# pragma omp parallel shared ( diff, u, w ) private ( i, j, my_diff ) num_threads(threads)
     {
       my_diff = 0.0;
 # pragma omp for
@@ -250,9 +247,9 @@ int main ( int argc, char *argv[] )
       {
         for ( j = 1; j < N - 1; j++ )
         {
-          if ( my_diff < fabs ( w[i][j] - u[i][j] ) )
+          if ( my_diff < fabs ( w[i*M+j] - u[i*M+j] ) )
           {
-            my_diff = fabs ( w[i][j] - u[i][j] );
+            my_diff = fabs ( w[i*M+j] - u[i*M+j] );
           }
         }
       }
