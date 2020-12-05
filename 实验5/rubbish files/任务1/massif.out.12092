@@ -1,0 +1,523 @@
+desc: --stacks=yes
+cmd: ./main 500 500 8
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=6870382347
+mem_heap_B=4010760
+mem_heap_extra_B=8088
+mem_stacks_B=946104
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=17571851105
+mem_heap_B=4010760
+mem_heap_extra_B=8088
+mem_stacks_B=2397760
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=24559418627
+mem_heap_B=4010184
+mem_heap_extra_B=8072
+mem_stacks_B=3344448
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=35307653233
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=4798560
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=46503547852
+mem_heap_B=4010760
+mem_heap_extra_B=8088
+mem_stacks_B=6312128
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=59008400481
+mem_heap_B=4010184
+mem_heap_extra_B=8072
+mem_stacks_B=8001200
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=72592684584
+mem_heap_B=4010760
+mem_heap_extra_B=8088
+mem_stacks_B=9834776
+heap_tree=detailed
+n3: 4010760 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 10760 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=80957027338
+mem_heap_B=4010184
+mem_heap_extra_B=8072
+mem_stacks_B=10963136
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=90086712906
+mem_heap_B=4010760
+mem_heap_extra_B=8088
+mem_stacks_B=12194432
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=102935369563
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=13926912
+heap_tree=detailed
+n3: 4011336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 11336 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=11
+#-----------
+time=113889385411
+mem_heap_B=4010184
+mem_heap_extra_B=8072
+mem_stacks_B=15404320
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=125723777461
+mem_heap_B=4010760
+mem_heap_extra_B=8088
+mem_stacks_B=16999936
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=131997247651
+mem_heap_B=4010184
+mem_heap_extra_B=8072
+mem_stacks_B=17845624
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=142252637303
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=19227584
+heap_tree=detailed
+n3: 4011336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 11336 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=15
+#-----------
+time=156551643740
+mem_heap_B=4011048
+mem_heap_extra_B=8096
+mem_stacks_B=21154864
+heap_tree=detailed
+n3: 4011048 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 11048 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=172015146363
+mem_heap_B=4010184
+mem_heap_extra_B=8072
+mem_stacks_B=23239488
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=180149306966
+mem_heap_B=4011048
+mem_heap_extra_B=8096
+mem_stacks_B=24335760
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=188608874564
+mem_heap_B=4010760
+mem_heap_extra_B=8088
+mem_stacks_B=25476656
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=197407066684
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=26663720
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=206920467397
+mem_heap_B=4011048
+mem_heap_extra_B=8096
+mem_stacks_B=27947464
+heap_tree=detailed
+n3: 4011048 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 11048 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=216488514920
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=29238632
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=226401474932
+mem_heap_B=4010472
+mem_heap_extra_B=8080
+mem_stacks_B=30577112
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=236714002956
+mem_heap_B=4010184
+mem_heap_extra_B=8072
+mem_stacks_B=31969448
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=247434385622
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=33416344
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=258601809590
+mem_heap_B=4010472
+mem_heap_extra_B=8080
+mem_stacks_B=34924184
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=270219009676
+mem_heap_B=4011048
+mem_heap_extra_B=8096
+mem_stacks_B=36493752
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=276842840504
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=37388104
+heap_tree=detailed
+n3: 4011336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 11336 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=289295146266
+mem_heap_B=4011048
+mem_heap_extra_B=8096
+mem_stacks_B=39070176
+heap_tree=detailed
+n3: 4011048 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 11048 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=302255742320
+mem_heap_B=4010760
+mem_heap_extra_B=8088
+mem_stacks_B=40820496
+heap_tree=detailed
+n3: 4010760 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 10760 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=30
+#-----------
+time=315735487570
+mem_heap_B=4011048
+mem_heap_extra_B=8096
+mem_stacks_B=42641216
+heap_tree=detailed
+n3: 4011048 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 11048 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=329759821912
+mem_heap_B=4011048
+mem_heap_extra_B=8096
+mem_stacks_B=44536112
+heap_tree=detailed
+n3: 4011048 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 11048 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=32
+#-----------
+time=344356216654
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=46507544
+heap_tree=detailed
+n3: 4011336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 11336 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=359416479038
+mem_heap_B=4011048
+mem_heap_extra_B=8096
+mem_stacks_B=48541952
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=375064098436
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=50655864
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=383128448385
+mem_heap_B=4010472
+mem_heap_extra_B=8080
+mem_stacks_B=51745120
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=391349056942
+mem_heap_B=4010184
+mem_heap_extra_B=8072
+mem_stacks_B=52855504
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=399734486830
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=53988600
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=411631453563
+mem_heap_B=4010184
+mem_heap_extra_B=8072
+mem_stacks_B=55595864
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=426721415202
+mem_heap_B=4011048
+mem_heap_extra_B=8096
+mem_stacks_B=57634824
+heap_tree=detailed
+n3: 4011048 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 11048 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=40
+#-----------
+time=435896803216
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=58874048
+heap_tree=detailed
+n3: 4011336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 11336 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=41
+#-----------
+time=443104308611
+mem_heap_B=4010760
+mem_heap_extra_B=8088
+mem_stacks_B=59848376
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=454796636135
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=61428160
+heap_tree=detailed
+n3: 4011336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 11336 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=463468561897
+mem_heap_B=4011048
+mem_heap_extra_B=8096
+mem_stacks_B=62599424
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=478296503448
+mem_heap_B=4010472
+mem_heap_extra_B=8080
+mem_stacks_B=64602800
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=489747362504
+mem_heap_B=4010760
+mem_heap_extra_B=8088
+mem_stacks_B=66150424
+heap_tree=detailed
+n3: 4010760 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 10760 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=499400573706
+mem_heap_B=4011048
+mem_heap_extra_B=8096
+mem_stacks_B=67454360
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=509312222035
+mem_heap_B=4011048
+mem_heap_extra_B=8096
+mem_stacks_B=68793552
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=516238697378
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=69729488
+heap_tree=detailed
+n3: 4011336 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 11336 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=519425561324
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=70159928
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=521405856166
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=70426912
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=521699961670
+mem_heap_B=4010760
+mem_heap_extra_B=8088
+mem_stacks_B=70467632
+heap_tree=detailed
+n3: 4010760 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 10760 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=52
+#-----------
+time=523679774407
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=70734552
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=525659009133
+mem_heap_B=4010184
+mem_heap_extra_B=8072
+mem_stacks_B=71001808
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=527217016180
+mem_heap_B=4011048
+mem_heap_extra_B=8096
+mem_stacks_B=71212368
+heap_tree=peak
+n3: 4011048 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 2000000 0x4013E0: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 2000000 0x401409: main (in /data/heze/HPC/lab5/任务1/main)
+ n0: 11048 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=55
+#-----------
+time=529195978931
+mem_heap_B=4011336
+mem_heap_extra_B=8104
+mem_stacks_B=71479712
+heap_tree=empty

@@ -1,0 +1,511 @@
+desc: --stacks=yes
+cmd: ./heated_plate_openmp 500 500 8
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=230675
+mem_heap_B=32816
+mem_heap_extra_B=8
+mem_stacks_B=768
+heap_tree=peak
+n1: 32816 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32816 0x5361A15: __alloc_dir (opendir.c:216)
+  n1: 32816 0x5361A15: opendir_tail (opendir.c:136)
+   n1: 32816 0x5361A15: opendir (opendir.c:190)
+    n1: 32816 0x53A1581: get_nprocs_conf (getsysstats.c:242)
+     n1: 32816 0x5368DE0: posix_sysconf (sysconf.c:628)
+      n1: 32816 0x5368DE0: linux_sysconf (sysconf.c:140)
+       n1: 32816 0x5368DE0: sysconf (sysconf.c:36)
+        n1: 32816 0x4E4CA6E: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+         n1: 32816 0x4E3C08A: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+          n1: 32816 0x4010782: call_init (dl-init.c:72)
+           n1: 32816 0x4010782: _dl_init (dl-init.c:119)
+            n1: 32816 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+             n1: 32816 0x3: ???
+              n1: 32816 0x1FFF000206: ???
+               n1: 32816 0x1FFF00021C: ???
+                n1: 32816 0x1FFF000220: ???
+                 n0: 32816 0x1FFF000224: ???
+#-----------
+snapshot=2
+#-----------
+time=41484050554
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=98500075234
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=135797083910
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=2536
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=194474387634
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=244111063548
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=293733499668
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=2704
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=333432786962
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=376439596254
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=409521625486
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=2776
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=453660710625
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=2656
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=485443619029
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3136
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=541942219665
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=577256245902
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=615259984248
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=673606366590
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=2416
+heap_tree=detailed
+n3: 5360 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 3272 0x4E3DAB8: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+  n1: 3072 0x4E4A9D7: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+   n1: 3072 0x4E41EC5: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 3072 0x4009F3: main (in /data/heze/HPC/lab5/heated_plate_openmp)
+  n1: 192 0x4E4AB55: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+   n1: 192 0x4E41EC5: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 192 0x4009F3: main (in /data/heze/HPC/lab5/heated_plate_openmp)
+  n0: 8 in 1 place, below massif's threshold (1.00%)
+ n1: 2016 0x40134F6: allocate_dtv (dl-tls.c:286)
+  n1: 2016 0x40134F6: _dl_allocate_tls (dl-tls.c:530)
+   n1: 2016 0x506B227: allocate_stack (allocatestack.c:627)
+    n1: 2016 0x506B227: pthread_create@@GLIBC_2.2.5 (pthread_create.c:644)
+     n1: 2016 0x4E4AF5F: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+      n1: 2016 0x4E41ED9: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n0: 2016 0x4009F3: main (in /data/heze/HPC/lab5/heated_plate_openmp)
+ n0: 72 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=728303117133
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3136
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=757474752162
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=2824
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=801025531846
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=840317607293
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=900405025181
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=927143857314
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=967252437878
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=2704
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=1011374519505
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=1068990479005
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=1114754045868
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=2824
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=1158309611354
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=1193758824642
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=1244559932128
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=1309218206995
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=1353089854684
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=1396963526181
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=1456983508056
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=1489288187048
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=1529427176307
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=1582946219249
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3016
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=1623083799844
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=1671247352161
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=2824
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=1716734113085
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=1756867739443
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=1805293962703
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=1845915625712
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=1899033916564
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=2840
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=1953714439440
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3424
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=2014621287716
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=2058348770162
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=2098956486151
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=2130191361319
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=2178683194806
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=2179652631502
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3016
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=2180622110638
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=2181592355360
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=2182561440436
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=detailed
+n3: 5360 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 3272 0x4E3DAB8: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+  n1: 3072 0x4E4A9D7: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+   n1: 3072 0x4E41EC5: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 3072 0x4009F3: main (in /data/heze/HPC/lab5/heated_plate_openmp)
+  n1: 192 0x4E4AB55: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+   n1: 192 0x4E41EC5: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n0: 192 0x4009F3: main (in /data/heze/HPC/lab5/heated_plate_openmp)
+  n0: 8 in 1 place, below massif's threshold (1.00%)
+ n1: 2016 0x40134F6: allocate_dtv (dl-tls.c:286)
+  n1: 2016 0x40134F6: _dl_allocate_tls (dl-tls.c:530)
+   n1: 2016 0x506B227: allocate_stack (allocatestack.c:627)
+    n1: 2016 0x506B227: pthread_create@@GLIBC_2.2.5 (pthread_create.c:644)
+     n1: 2016 0x4E4AF5F: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+      n1: 2016 0x4E41ED9: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n0: 2016 0x4009F3: main (in /data/heze/HPC/lab5/heated_plate_openmp)
+ n0: 72 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=54
+#-----------
+time=2183531952780
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3256
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=2184501575920
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3016
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=2185470982628
+mem_heap_B=5360
+mem_heap_extra_B=104
+mem_stacks_B=3136
+heap_tree=empty
